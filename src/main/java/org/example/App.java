@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Hello from IntelliJ + Git!");
         sayHello("Team");
-        greetStudent("Alice", " git");
+        greetStudent("Alice", "  git");
     }
 
     public static void sayHello(String name) {
