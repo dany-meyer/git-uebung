@@ -20,13 +20,14 @@ Die Studierenden lernen:
    ```
 3. Klicke **Add account** → **Log in with token**.
 4. Öffne GitHub im Browser und gehe zu:
+   auf Profil-Bild klicken -> Settings --> Developer Settings (links ganz unten) --> personal access tokens
    [https://github.com/settings/tokens](https://github.com/settings/tokens)
-5. Klicke **Generate new token** und wähle:
+6. Klicke **Generate new token** und wähle:
    - Name: `IntelliJ-Git`
    - Expiration: z. B. 90 Tage
    - Scopes: `repo`
-6. Klicke **Generate token** und kopiere ihn.
-7. Füge den Token in IntelliJ ein und bestätige mit **OK**.
+7. Klicke **Generate token** und kopiere ihn.
+8. Füge den Token in IntelliJ ein und bestätige mit **OK**.
 
 ---
 
@@ -58,7 +59,7 @@ Die Studierenden lernen:
 ---
 
 ## Teil 3: Code erweitern
-Öffne die Datei `App.java` und füge eine neue Methode hinzu: ein eigener Methodenname wäre sinnvoll
+Öffne die Datei `App.java` und füge eine neue Methode hinzu: eine eigene Methode mit speziellem Namen wäre sinnvoll
 
 ```java
 public static void greetStudent(String name, String course) {
