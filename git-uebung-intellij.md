@@ -94,7 +94,82 @@ greetStudent("Alice", "git");
 3. Füge eine kurze Beschreibung hinzu und klicke **Create Pull Request**.
 
 ---
+## Teil 6: Pull Request mergen und Konflikte lösen
+Pull Request erstellen (in IntelliJ oder auf GitHub)
+Pull Requests müssen nicht zwingend auf GitHub im Browser erstellt werden – IntelliJ kann das direkt übernehmen.
 
+#### Variante A: In IntelliJ
+1. Menü:
+   ```
+   Git → GitHub → Create Pull Request
+   ```
+2. IntelliJ öffnet ein Fenster:
+   - **Base branch:** `main`
+   - **Compare branch:** dein Feature-Branch
+   - **Title:** z. B. „Add greetStudent method“
+   - **Description:** kurze Beschreibung deiner Änderung
+3. Optional: **Reviewer** auswählen (falls das Repository das verlangt).
+4. Klicke **Create Pull Request** – IntelliJ öffnet den PR auf GitHub automatisch.
+
+#### Variante B: Auf GitHub im Browser
+1. Gehe zu deinem Repository.
+2. GitHub erkennt automatisch deinen neuen Branch und schlägt einen Pull Request vor.
+3. Klicke **Compare & pull request**, beschreibe die Änderung und bestätige mit **Create pull request**.
+
+---
+
+### Pull Request mergen
+1. Nach der Codeprüfung (Review) kann der Pull Request gemergt werden:
+   - Auf GitHub: **Merge pull request** → **Confirm merge**
+   - Oder direkt in IntelliJ:
+     - Öffne das **Git Tool Window**
+     - Wähle **Git → GitHub → View Pull Requests**
+     - Dort kannst du den PR öffnen, prüfen und über das Menü **Merge Pull Request** abschließen
+2. Nach dem Merge:
+   - Der Code deines Branches ist jetzt Teil von `main`.
+   - Lokale Bereinigung:
+     ```
+     git checkout main
+     git pull --ff-only
+     git branch -d feature/<dein-name>
+     git push origin --delete feature/<dein-name>
+     ```
+
+---
+
+### Konflikte erkennen und lösen
+Wenn GitHub oder IntelliJ meldet:
+> **This branch has conflicts that must be resolved**
+
+Dann wurde `main` verändert und dein Branch ist nicht mehr kompatibel.
+
+#### Konfliktlösung in IntelliJ:
+1. Aktualisiere zuerst den `main`-Branch:
+   ```
+   Git → Fetch
+   ```
+2. Starte ein Rebase deines Branches auf `main`:
+   ```
+   Git → Rebase… → Onto: origin/main → Start
+   ```
+3. IntelliJ zeigt die Konfliktdateien an:
+   - Öffne die betroffene Datei.
+   - Wähle **Accept Yours**, **Accept Theirs** oder führe manuell zusammen.
+   - Danach: **Mark as Resolved**.
+4. Setze das Rebase fort:
+   ```
+   Git → Rebase → Continue
+   ```
+5. Wenn der Rebase abgeschlossen ist:
+   ```
+   git push --force-with-lease
+   ```
+   (in IntelliJ über **Git → Push**, dann im Dropdown  **Force Push** auswählen)
+
+---
+Nach dem Merge zum main-Zweig zurückkehren und mit Pull den Merge holen. Der Hauptast ist jetzt aktualisiert.
+
+---
 
 ## Empfohlene `.gitignore` für IntelliJ-Projekte
 ```gitignore
