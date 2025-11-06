@@ -1,5 +1,5 @@
 
-# Git-Übung: Arbeiten mit IntelliJ und GitHub im Branch
+# Git-Übung: Arbeiten mit IntelliJ und GitHub
 
 ## Ziel
 Die Studierenden lernen:
