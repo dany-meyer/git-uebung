@@ -22,6 +22,7 @@ Die Studierenden lernen:
 4. Öffne GitHub im Browser und gehe zu:
    auf Profil-Bild klicken -> Settings --> Developer Settings (links ganz unten) --> personal access tokens
    [https://github.com/settings/tokens](https://github.com/settings/tokens)
+   
 6. Klicke **Generate new token** und wähle:
    - Name: `IntelliJ-Git`
    - Expiration: z. B. 90 Tage
