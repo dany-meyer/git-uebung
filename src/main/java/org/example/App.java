@@ -1,5 +1,7 @@
 package org.example;
-
+/**
+ * Comment
+ */
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello Studis from IntelliJ + Git!");
