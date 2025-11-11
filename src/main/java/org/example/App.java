@@ -19,7 +19,7 @@ public class App {
     }
 
     public void newMethod() {
-        System.out.println("New Method");
+        System.out.println("New Method, hier ändere ich den Text");
     }
 }
 
