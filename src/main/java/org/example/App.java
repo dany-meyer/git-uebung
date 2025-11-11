@@ -17,5 +17,9 @@ public class App {
     public static void greetStudent_dany(String name, String course) {
         System.out.println("Welcome " + name + " to the course " + course + "!");
     }
+
+    public void newMethod() {
+        System.out.println("New Method");
+    }
 }
 
