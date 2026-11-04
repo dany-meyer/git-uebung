@@ -4,7 +4,7 @@ package org.example;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello Studis aus Branch1 und Branch2");
+        System.out.println("Hello Studis");
         sayHello("Team");
     }
 
